@@ -1,0 +1,19 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "An awesome snake game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enriquebarco/snake.git"
+  },
+  "author": "Enrique Barco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enriquebarco/snake/issues"
+  },
+  "homepage": "https://github.com/enriquebarco/snake#readme"
+}

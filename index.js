@@ -3,7 +3,7 @@ let Game = {
   width: 1000,
   height: 1000,
   scale: 2,
-  loopTime: 270,
+  loopTime: 150,
   squareHeight: 40,
   borderShrinkFactor: .09,
   numBlocks: 20,
