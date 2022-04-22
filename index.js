@@ -1,24 +1,27 @@
 let Game = {
 
-  width: 1200,
-  height: 1200,
+  width: 1000,
+  height: 1000,
   scale: 2,
   loopTime: 270,
   squareHeight: 40,
   borderShrinkFactor: .09,
-  numBlocks: 16,
+  numBlocks: 20,
+
+ 
 
   background: '#282828',
   appleColor: '#f51439',
-  snakeColor: '#33FF00',
-  borderColor: '#9922ee',
+  snakeColor: '#008000',
+  borderColor: '#ffd700',
+
+  score: 0,
 
   apple: {x:-1, y:-1},
   
   snake: [
     {x:3, y:1},
     {x:2, y:1},
-    {x:1, y:1},
   ],
   velocity: {x: 1, y: 0},
 
@@ -37,8 +40,11 @@ let Game = {
     requestAnimationFrame(render);
   },
   initCanvas() {
+    this.scoreHTML = document.getElementsByTagName('score')[0];
     this.canvas = document.getElementsByTagName('canvas')[0];
     this.ctx = this.canvas.getContext('2d');
+
+    this.scoreHTML.innerHTML = "Score: " + this.score
 
     this.canvas.width = this.width;
     this.canvas.height = this.height;
@@ -144,7 +150,9 @@ let Game = {
       let snakeEndY = this.snake[snakeEnd].y;
 
       if(this.snake[0].x === this.apple.x && this.snake[0].y === this.apple.y) {
-        console.log("Eat!")
+        console.log("Eat!");
+        this.score++;
+        this.scoreHTML.innerHTML = "Score: " + this.score
         this.snake.push({x: snakeEndX, y: snakeEndY})
 
         for(let applePiece in this.apple) {

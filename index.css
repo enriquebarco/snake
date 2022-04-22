@@ -10,14 +10,13 @@ main {
     height: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 display {
-    width: 300px;
-    height: 600px;
-    margin: 25px;
+    width: 500px;
 
     display: flex;
     flex-direction: column;
@@ -39,9 +38,16 @@ statusTitle > h2 {
     margin: 0px;
 }
 
+score {
+    font-size: 1.5rem;
+    margin-bottom: .25rem;
+    text-align: center;
+}
+
 challengeSummary {
     border-top: solid 1px;
     padding: 10px;
+    font-size: .85rem;
     margin-bottom: 20px;
 }
 
