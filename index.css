@@ -51,12 +51,6 @@ challengeSummary {
     margin-bottom: 20px;
 }
 
-#exampleLink {
-    padding: 10px;
-    font-family: 'Inconsolata', monospace;
-    color: white;
-}
-
 canvas {
     box-shadow: 0px 0px 20px 5px #8080808f;
 }
